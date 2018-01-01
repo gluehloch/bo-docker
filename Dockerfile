@@ -9,9 +9,8 @@ RUN apt-get update && apt-get install -y \
   nodejs \
   npm \
   git \
-  vim
-
-RUN useradd -m developer
+  vim \
+  && useradd -m developer
 
 # /etc/ssh/ssh_config
 # Host bitbucket.org
