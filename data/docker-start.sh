@@ -11,5 +11,10 @@ eval $("docker-machine" env)
 BETOFFICE_PROJECT_ROOT=~/development/projects/betoffice
 BO_CORE=$BETOFFICE_PROJECT_ROOT/core/betoffice-storage
 
-mysql -u root -h 192.168.99.100 < $BO_CORE/src/database/mysql_create_prod.sql
-mysql -u root -h 192.168.99.100 < $BO_CORE/src/database/mysql_test_prod.sql
+#mysql -u root -h 192.168.99.100 < $BO_CORE/src/database/mysql_create_prod.sql
+#mysql -u root -h 192.168.99.100 < $BO_CORE/src/database/mysql_test_prod.sql
+
+mysql -u root -h 192.168.99.100 << EOF
+source $BO_CORE/src/database/mysql_create_prod.sql
+source $BO_CORE/src/database/mysql_create_test.sql
+EOF
