@@ -30,7 +30,7 @@ docker run --name bodata -p 127.0.0.1:3306:3306
     -e MYSQL_ALLOW_EMPTY_PASSWORD=true -d mariadb:latest
 ```
 
----> botom-1.1.1 / botomcat
+### botomcat-1.1.0
 
 -- Nach Vorbereitung des Images, commit ...
 -- Die Adresse 127.0.0.1 ist nicht korrekt, wenn die Instanz von 'außen' erreichbar sein soll.
