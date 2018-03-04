@@ -7,7 +7,7 @@ FROM tomcat:8.5.24
 LABEL maintainer="Andre Winkler"
 LABEL mail="andre.winkler@web.de"
 
-COPY betoffice-jweb-1.1.1-SNAPSHOT.war /usr/local/tomcat/webapps/betoffice-jweb.war
+COPY betoffice-jweb-1.1.1.war /usr/local/tomcat/webapps/betoffice-jweb.war
 COPY context.xml /usr/local/tomcat/conf
 COPY mysql-connector-java-5.1.31.jar /usr/local/tomcat/lib
 
