@@ -1,6 +1,6 @@
-# docker build -t betoffice/tomcat:1.2.0 .
+# docker build -t botomcat:1.2.2 .
 # Namensvorschlaege: botomcat / botom
-# docker run --expose 8080 -p 8080:8080 --name botomcat-1.2.0 -d betoffice/tomcat:1.2.0
+# docker run --expose 8080 -p 8080:8080 --name botomcat-1.2.2 -d betoffice/tomcat:1.2.0
 
 FROM tomcat:8.5.24
 
