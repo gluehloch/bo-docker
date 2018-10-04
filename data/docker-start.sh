@@ -2,7 +2,7 @@
 echo 'Die Shell wird mit dem folgenden Kommando mit den Docker-Machine Variablen bestückt:  eval $("docker-machine" env)'
 echo "Starten von bodata ..."
 
-eval $("docker-machine" env)
+# eval $("docker-machine" env)
 # Kurze Erklärung zu den IP/Port-Adressen:
 #  IP-Adresse: 1) Diese Adresse ist vom Host aus erreichbar. Ist das der Host? Nein? Oder?!?
 #              2) Ein Port aus dem Container der nach 192.168.99.100:3307 geschleift wird.
