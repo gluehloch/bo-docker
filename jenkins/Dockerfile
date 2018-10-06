@@ -1,6 +1,7 @@
 # awtools Jenkins 
 # docker build -t jenkins-test:latest .
 # docker run --name jenkins-test -d -p 8888:8080 -p 50000:50000 -v jenkins-home:/var/jenkins_home jenkins-test:latest
+# docker run --name jenkins-test -d -p 8888:8080 -p 50000:50000 -v /c/Users/winkler/.m2:/var/maven -v jenkins-home:/var/jenkins_home jenkins-test:latest
 # docker exec -u root  -it jenkins-lts-2 bash
 
 FROM jenkins/jenkins:lts
