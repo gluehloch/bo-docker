@@ -1,0 +1,4 @@
+Host boprod.tdkb
+  HostName 92.51.164.128
+  User boprod
+  IdentityFile ~/.ssh/tdkb/tdkb-boprod
