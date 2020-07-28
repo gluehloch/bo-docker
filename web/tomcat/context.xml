@@ -51,6 +51,5 @@
               username="betoffice"
               password="betoffice"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://192.168.99.101:3306/betoffice"/>
-
+              url="jdbc:mysql://mariadb:3306/betoffice"/>
 </Context>
