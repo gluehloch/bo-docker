@@ -17,10 +17,10 @@ BETOFFICE_PROJECT_ROOT='~/development/projects/betoffice'
 BO_CORE="${BETOFFICE_PROJECT_ROOT}/core/betoffice-storage"
 BO_CORE_SRC_DATABASE="${BO_CORE}/src/database"
 
-DOCKER_CONTAINER_IP='192.168.99.100'
+DOCKER_CONTAINER_IP='192.168.99.101'
 
-#mysql -u root -h 192.168.99.100 < $BO_CORE/src/database/mysql_create_prod.sql
-#mysql -u root -h 192.168.99.100 < $BO_CORE/src/database/mysql_test_prod.sql
+#mysql -u root -h 192.168.99.101 < $BO_CORE/src/database/mysql_create_prod.sql
+#mysql -u root -h 192.168.99.101 < $BO_CORE/src/database/mysql_test_prod.sql
 
 mysql -u root -h ${DOCKER_CONTAINER_IP} << EOF
 source $BO_CORE/src/database/mysql_create_prod.sql
