@@ -1,9 +1,9 @@
 # docker build -t botomcat:1.2.4 .
 # Namensvorschlaege: botomcat
 #
-# docker run -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-1.2.4 -d botomcat:1.2.4
+# docker run -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat -d betoffice/tomcat:1.2.4
 #
-FROM tomcat:9.0.21-jdk11-openjdk
+FROM tomcat:9.0.37-jdk14-openjdk-buster
 
 LABEL maintainer="Andre Winkler"
 LABEL mail="andre.winkler@web.de"
