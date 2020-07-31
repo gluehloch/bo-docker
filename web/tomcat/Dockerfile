@@ -2,7 +2,7 @@
 # Important: Network and timezone!
 #
 # docker build -t betoffice/tomcat:1.4.0 .
-# docker run --net betoffice -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-1.2.4 -d betoffice/botomcat:1.2.4
+# docker run --net betoffice -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-1.2.4 -d betoffice/tomcat:1.2.4
 # docker exec -it botomcat /bin/bash
 
 # FROM tomcat:10.0.0-jdk14-openjdk-buster
