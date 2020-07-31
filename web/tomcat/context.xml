@@ -50,7 +50,6 @@
                 org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"
               username="betoffice"
               password="betoffice"
-              driverClassName="com.mysql.jdbc.Driver"
+              driverClassName="com.mariadb.jdbc.Driver"
               url="jdbc:mysql://mariadb:3306/betoffice"/>
-
 </Context>
