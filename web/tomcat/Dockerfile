@@ -1,7 +1,9 @@
 # docker build -t betoffice/tomcat:1.3.0-SNAPSHOT .
 # docker run --net dev --expose 8080 -p 8080:8080 --name botomcat -d betoffice/botomcat:1.3.0-SNAPSHOT
+# docker exec -it botomcat /bin/bash
 
-FROM tomcat:10.0.0-jdk14-openjdk-buster
+# FROM tomcat:10.0.0-jdk14-openjdk-buster
+FROM tomcat:9.0.35-jdk14-openjdk-oracle
 
 LABEL maintainer="Andre Winkler"
 LABEL mail="andre.winkler@web.de"
