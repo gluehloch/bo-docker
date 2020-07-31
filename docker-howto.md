@@ -4,10 +4,14 @@ Disclaimer: This site is under heavy construction/elaboration/etc./etc.
 
 docker pull mariadb/latest
 
-# Build an image
+## Build an image
 ```
 docker build .
-docker build . -t awtools/tomcat:8.5.24
+docker build . -t betoffice/botomcat:1.3.0-SNAPSHOT
+```
+## Run the image
+```
+docker run --net dev --expose 127.0.0.1:8080:8080 betoffice/botomcat:1.3.0-SNAPSHOT 
 ```
 
 # TAG you image
