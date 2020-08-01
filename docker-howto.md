@@ -7,11 +7,17 @@ docker pull mariadb/latest
 ## Build an image
 ```
 docker build .
-docker build . -t betoffice/botomcat:1.3.0-SNAPSHOT
+docker build . -t betoffice/tomcat:1.2.4
 ```
 ## Run the image
+Die Webanwendung erwartet die Datenbank im Netzwerk 'betoffice' unter dem Namen 'mariadb'.
+
 ```
-docker run --net dev --expose 127.0.0.1:8080:8080 betoffice/botomcat:1.3.0-SNAPSHOT 
+docker network create betoffice
+```
+
+```
+docker run --net betoffice -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-1.2.4 -d betoffice/tomcat:1.2.4
 ```
 
 # TAG you image
