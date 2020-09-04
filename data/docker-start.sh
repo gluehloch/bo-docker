@@ -17,7 +17,7 @@ BETOFFICE_PROJECT_ROOT='~/development/projects/betoffice'
 BO_CORE="${BETOFFICE_PROJECT_ROOT}/core/betoffice-storage"
 BO_CORE_SRC_DATABASE="${BO_CORE}/src/database"
 
-DOCKER_CONTAINER_IP='192.168.99.101'
+DOCKER_CONTAINER_IP='127.0.0.1'
 
 #mysql -u root -h 192.168.99.101 < $BO_CORE/src/database/mysql_create_prod.sql
 #mysql -u root -h 192.168.99.101 < $BO_CORE/src/database/mysql_test_prod.sql
