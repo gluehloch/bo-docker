@@ -4,7 +4,7 @@
 
 FROM tomcat:9.0.37-jdk14-openjdk-buster
 
-# docker build -t betoffice/tomcat:1.2.4 .
+# docker build -t betoffice/tomcat:1.2.6 .
 # docker run --net betoffice -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-1.2.6 -d betoffice/tomcat:1.2.6
 # docker exec -it botomcat /bin/bash
 
