@@ -2,6 +2,9 @@
 echo 'Die Shell wird mit dem folgenden Kommando mit den Docker-Machine Variablen bestückt:  eval $("docker-machine" env)'
 echo "Starten von bodata ..."
 
+# docker pull mariadb
+# docker run --name mariadb -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true -d  mariadb:latest
+
 # eval $("docker-machine" env)
 # Kurze Erklärung zu den IP/Port-Adressen:
 #  IP-Adresse: 1) Diese Adresse ist vom Host aus erreichbar. Ist das der Host? Nein? Oder?!?
