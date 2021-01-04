@@ -2,7 +2,15 @@ Disclaimer: This site is under heavy construction/elaboration/etc./etc.
 
 # PULL The Image
 
+Does not work anymore:
+```
 docker pull mariadb/latest
+```
+
+That´s the way you do it:
+```
+docker run --net betoffice -p 3306:3306  --name mariadb -e MYSQL_ALLOW_EMPTY_PASSWORD=true -d mariadb:latest
+```
 
 ## Build an image
 ```
@@ -11,7 +19,7 @@ docker build . -t betoffice/botomcat:1.3.0-SNAPSHOT
 ```
 ## Run the image
 ```
-docker run --net dev --expose 127.0.0.1:8080:8080 betoffice/botomcat:1.3.0-SNAPSHOT 
+docker run --net betoffice --expose 127.0.0.1:8080:8080 betoffice/botomcat:1.3.0-SNAPSHOT 
 ```
 
 # TAG you image
