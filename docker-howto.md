@@ -38,17 +38,10 @@ docker tag 7d9495d03763 maryatdocker/docker-whale:latest
     ACHTUNG: Die IP Adresse ist anzupassen. So werden die Ports nur auf LOCALHOST freigeschaltet. Je nach dem wo die Docker-Machine läuft.
 
 ```
-docker run --name bodata -p 127.0.0.1:3306:3306
-    -e MYSQL_ALLOW_EMPTY_PASSWORD=true -d mariadb:latest
+docker run --name bodata -p 127.0.0.1:3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true -d mariadb:latest
 ```
 
-### botomcat-1.1.0
-
--- Nach Vorbereitung des Images, commit ...
--- Die Adresse 127.0.0.1 ist nicht korrekt, wenn die Instanz von 'außen' erreichbar sein soll.
--- Besser ist die IP Adresse des Containers: Also z.B. 192.168.99.100
-
-### Command Line Access / Deploy other WARs
+# Command Line Access / Deploy other WARs
 Den RegistrationService 
 
 ```
@@ -57,24 +50,19 @@ docker cp .\.register.properties <botomcat-1.3.0>:/root
 docker cp .\target\registrationservice-0.3.0-SNAPSHOT.war <botomcat-1.3.0>:/usr/local/tomcat/webapps/registrationservice.war 
 ```
 
-
-### Config the MariaDB
-
-docker exec -it mariadbtest bash
-
-* Install the editor *
+# Config MariaDB
 
 Auf der Bash in dem Docker Container arbeiten:
 
-docker exec --it testtest bash
+    docker exec --it testtest bash
 
-==> Per command line
+Per Command-Line VI nachinstallierren:
 ```
 apt-get update
 apt-get install vim
 ```
 
-==> Here with a docker file
+Könnte Bestandteil des Dockerfile Skripts werden:
 ```
 FROM  confluent/postgres-bw:0.1
 
