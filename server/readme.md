@@ -9,7 +9,8 @@ systemctl stop tomcat
 
 # Systemd Konfiguration (2021-06-28)
 
-`/etc/systemd/system`
+Siehe Server Verzeichnis `/etc/systemd/system`
+
 ```
 [Unit]
 Description=Apache Tomcat Web Application Container

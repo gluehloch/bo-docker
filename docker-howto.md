@@ -48,6 +48,15 @@ docker run --name bodata -p 127.0.0.1:3306:3306
 -- Die Adresse 127.0.0.1 ist nicht korrekt, wenn die Instanz von 'außen' erreichbar sein soll.
 -- Besser ist die IP Adresse des Containers: Also z.B. 192.168.99.100
 
+### Command Line Access / Deploy other WARs
+Den RegistrationService 
+
+```
+docker exec -it <botomcat-1.3.0> bash
+docker cp .\.register.properties <botomcat-1.3.0>:/root
+docker cp .\target\registrationservice-0.3.0-SNAPSHOT.war <botomcat-1.3.0>:/usr/local/tomcat/webapps/registrationservice.war 
+```
+
 
 ### Config the MariaDB
 
@@ -73,6 +82,8 @@ RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "-y", "vim"]
 ```
 
+TODO: Der nächste Abschnitt muss überarbeitet werden. Ist vermutlich veraltet.
+
 In der MariaDB Konfiguration müssen dann noch die folgenden Einstellungen vorgenommen werden.
 Die folgenden Zeilen müssen kommentiert bleiben.
 ```
@@ -85,30 +96,4 @@ Die folgenden Zeilen müssen kommentiert bleiben.
 
 ```
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
-```
-
-```
-************* MARIA DB Anpassungen *****************************
-innodb_buffer_pool_size = 64M
-innodb_additional_mem_pool_size = 12M
-## Set .._log_file_size to 25 % of buffer pool size
-innodb_log_file_size = 20M
-innodb_log_buffer_size = 32M
-# awi innodb_flush_log_at_trx_commit = 1
-innodb_flush_log_at_trx_commit = 2
-
-# awi
-# A value of 1 is required for ACID compliance. You can achieve better performance
-# by setting the value different from 1, but then you can lose at most one second
-# worth of transactions in a crash. With a # value of 0, any mysqld process crash
-# can erase the last second of transactions. With a value of 2, then only an
-# operating system crash or a power outage can erase the last second of transactions.
-# However, #InnoDB's crash recovery is not affected and thus crash recovery does work regardless of the value.
-
-
-*********** Still performance issues ***************
-betoffice-storage build--time 16 Minuten mit allen tests.
-
-I tried:
-innodb_buffer_pool_size = 256M => innodb_buffer_pool_size = 514M
 ```
