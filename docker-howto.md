@@ -42,7 +42,7 @@ docker run --name bodata -p 127.0.0.1:3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=tr
 ```
 
 # Command Line Access / Deploy other WARs
-Den RegistrationService 
+Den RegistrationService in eine laufende Docker Tomcat Instanz installieren.
 
 ```
 docker exec -it <botomcat-1.3.0> bash
