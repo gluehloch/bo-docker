@@ -19,7 +19,7 @@ docker build . -t betoffice/botomcat:1.3.0-SNAPSHOT
 ```
 ## Run the image
 ```
-docker run --net betoffice --expose 127.0.0.1:8080:8080 betoffice/botomcat:1.3.0-SNAPSHOT 
+docker run --net betoffice -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-1.3.1 -d betoffice/tomcat:1.3.1 
 ```
 
 # TAG you image
