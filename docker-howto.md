@@ -2,9 +2,15 @@ Disclaimer: This site is under heavy construction/elaboration/etc./etc.
 
 # PULL The Image
 
-Does not work anymore:
+Does not work anymore / Befehl überspringen und den nächsten ausführen. Das `docker run` zieht sich 
+das Image. Einen Hinweis, warum das nicht funktioniert, habe ich bisher nicht gefunden.
 ```
 docker pull mariadb/latest
+```
+
+Ein Netzwerk für die Container anlegen:
+```
+docker network create betoffice
 ```
 
 That´s the way you do it:
