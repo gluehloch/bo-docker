@@ -60,7 +60,7 @@ docker cp .\target\registrationservice-0.3.0-SNAPSHOT.war <botomcat-1.3.0>:/usr/
 
 Auf der Bash in dem Docker Container arbeiten:
 
-    docker exec --it testtest bash
+    docker exec -it testtest bash
 
 Per Command-Line VI nachinstallierren:
 ```
