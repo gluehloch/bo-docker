@@ -1,6 +1,7 @@
 # Nginx Reverse Proxy Configuration
 
 ```
+#
 location / {
     proxy_pass http://localhost:4200;
     proxy_http_version 1.1;
