@@ -4,8 +4,8 @@
 
 FROM tomcat:10.1.18-jdk21
 
-# docker build -t betoffice:1.4.1-SNAP .
-# docker run --net betoffice -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-LEAST -d betoffice:1.4.1-SNAP
+# docker build -t betoffice:1.4.1 .
+# docker run --net betoffice -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-LEAST -d betoffice:1.4.1
 # docker exec -it botomcat /bin/bash
 
 LABEL maintainer="Andre Winkler"
