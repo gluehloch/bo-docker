@@ -11,6 +11,7 @@ docker run --name test-jdk21 -it --rm alpinejava:21-jdk
 ```
 docker pull maven:3.9.9-eclipse-temurin-21-jammy
 docker run --name alpine-mvn  -it  maven:3.9.9-eclipse-temurin-21-jammy
+docker exec -it alpine-maven-git bash
 ```
 
 ```
