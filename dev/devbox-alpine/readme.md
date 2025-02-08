@@ -8,6 +8,7 @@ docker pull alpine/java:21-jdk
 docker run --name test-jdk21 -it --rm alpinejava:21-jdk
 ```
 
+Docker Image mit JDK 21 und Maven:
 ```
 docker pull maven:3.9.9-eclipse-temurin-21-jammy
 docker run --name alpine-mvn  -it  maven:3.9.9-eclipse-temurin-21-jammy
