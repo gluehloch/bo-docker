@@ -4,19 +4,11 @@
 
 FROM tomcat:10.1.18-jdk21
 
-<<<<<<< HEAD
 # docker build -t betoffice:1.5.1-SNAPSHOT .
 # docker run --net betoffice -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-1.5.1-SNAPSHOT -d betoffice:1.5.1-SNAPSHOT
 # docker commit botomcat-1.5.1-SNAPSHOT gluehloch/betoffice:1.5.1-SNAPSHOT
 # docker login
 # docker push gluehloch/betoffice:1.5.1-SNAPSHOT
-=======
-# docker build -t betoffice:1.5.1-SNAP .
-# docker run --net betoffice -e TZ="Europe/Berlin" --expose 8080 -p 8080:8080 --name botomcat-1.5.1-SNAP -d betoffice:1.5.1-SNAP
-# docker commit botomcat-1.5.1-SNAP gluehloch/betoffice:1.5.1-SNAP
-# docker login
-# docker push gluehloch/betoffice:1.5.1-SNAP
->>>>>>> 101ce5e (Next SNAPSHOT release.)
 
 # docker exec -it botomcat /bin/bash
 
