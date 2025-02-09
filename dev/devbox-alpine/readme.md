@@ -3,6 +3,7 @@ docker container create --name my-alpine -it alpine:latest /bin/sh
 docker container create --name my-alpine -it alpine/java:21-jdk:latest /bin/sh
 ```
 
+Docker Image mit JDK 21
 ```
 docker pull alpine/java:21-jdk
 docker run --name test-jdk21 -it --rm alpinejava:21-jdk
