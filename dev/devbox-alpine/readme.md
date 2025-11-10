@@ -24,4 +24,3 @@ docker run --name test -it --rm alpine
 docker container start -i test
 ```
 
-alpine/java:21-jdk
